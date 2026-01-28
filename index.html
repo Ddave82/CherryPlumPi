@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CherryPlum Pi - The Future of Mini Computing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">🍒 CherryPlum Pi</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#specs">Specs</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#buy" class="nav-cta">Pre-order</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section with 3D Canvas -->
+    <section class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">CherryPlum</span>
+                <span class="title-line highlight">Pi</span>
+            </h1>
+            <div class="hero-image-mobile">
+                <img src="images/cherryplum.png" alt="CherryPlum Pi Board">
+            </div>
+            <p class="hero-subtitle">The mini computer that redefines possibility</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Core CPU</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">16</span>
+                    <span class="stat-label">GB RAM</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">nm Process</span>
+                </div>
+            </div>
+            <a href="#features" class="hero-cta">Explore the Future</a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section with 3D Cards -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2 class="section-title">Unleash Your Creativity</h2>
+            <p class="section-subtitle">Powerful features in a compact form factor</p>
+        </div>
+        <div class="features-container">
+            <div class="feature-card" data-tilt>
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="card-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>8-core ARM processor with AI acceleration</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="card-icon">🌐</div>
+                        <h3>Connectivity</h3>
+                        <p>WiFi 6E, Bluetooth 5.3, 2.5Gb Ethernet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="card-icon">🎮</div>
+                        <h3>Gaming Ready</h3>
+                        <p>Integrated GPU supports 4K@120Hz gaming</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card" data-tilt>
+                <div class="card-3d">
+                    <div class="card-front">
+                        <div class="card-icon">🔒</div>
+                        <h3>Secure Boot</h3>
+                        <p>Hardware-level security with TPM 2.0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Product Showcase -->
+    <section id="specs" class="product-showcase">
+        <div class="showcase-container">
+            <div class="product-3d-wrapper">
+                <div class="product-model">
+                    <img src="images/cherryplum.png" alt="CherryPlum Pi Board" class="product-image">
+                </div>
+            </div>
+            <div class="specs-content">
+                <h2 class="specs-title">Technical Excellence</h2>
+                <div class="specs-list">
+                    <div class="spec-item">
+                        <span class="spec-name">Processor</span>
+                        <span class="spec-value">ARM Cortex-A78 8-Core @ 2.4GHz</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Memory</span>
+                        <span class="spec-value">16GB LPDDR5X</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Storage</span>
+                        <span class="spec-value">128GB eMMC + microSD slot</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Graphics</span>
+                        <span class="spec-value">Mali-G710 MC10</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Connectivity</span>
+                        <span class="spec-value">WiFi 6E, BT 5.3, 2.5GbE</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions</span>
+                        <span class="spec-value">85mm × 56mm × 17mm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="gallery-header">
+            <h2>Infinite Possibilities</h2>
+            <p>From IoT to AI, CherryPlum Pi powers it all</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-speed="0.5">
+                <div class="gallery-card">
+                    <div class="card-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="card-content">
+                        <h3>Home Automation</h3>
+                        <p>Control your entire smart home</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-speed="0.8">
+                <div class="gallery-card">
+                    <div class="card-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="card-content">
+                        <h3>Media Center</h3>
+                        <p>4K streaming powerhouse</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-speed="0.6">
+                <div class="gallery-card">
+                    <div class="card-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="card-content">
+                        <h3>AI/ML Projects</h3>
+                        <p>Built-in neural engine</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-speed="0.9">
+                <div class="gallery-card">
+                    <div class="card-bg" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    <div class="card-content">
+                        <h3>Retro Gaming</h3>
+                        <p>Emulation station</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-speed="0.7">
+                <div class="gallery-card">
+                    <div class="card-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="card-content">
+                        <h3>Web Server</h3>
+                        <p>Host your applications</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item" data-speed="0.5">
+                <div class="gallery-card">
+                    <div class="card-bg" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    <div class="card-content">
+                        <h3>Robotics</h3>
+                        <p>GPIO for makers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- CTA Section -->
+    <section id="buy" class="cta-section">
+        <div class="cta-background">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p class="cta-price">Starting at <span class="price">$89</span></p>
+            <p class="cta-note">Pre-order now and get exclusive CherryPlum Pi accessories</p>
+            <button class="cta-button">
+                <span>Pre-order Now</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">🍒 CherryPlum Pi</span>
+                <p>The future of mini computing</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Documentation</a>
+                <a href="#">Community</a>
+                <a href="#">GitHub</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CherryPlum Pi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
