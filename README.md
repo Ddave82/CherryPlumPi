@@ -1,9 +1,16 @@
-# 🍒 CherryPlum Pi
+🍒 CherryPlum Pi
 
 **CherryPlum Pi** is a **fictional next-generation mini computer** and this repository contains a **high-end landing page concept** built to showcase what a modern hardware product website *could* look like.
 
 > ⚠️ This is a **concept project**.  
 > CherryPlum Pi is **not a real product**.
+
+---
+
+## 🌍 Live Demo
+
+👉 **View the live site here:**  
+🔗 https://ddave82.github.io/CherryPlumPi/
 
 ---
 
